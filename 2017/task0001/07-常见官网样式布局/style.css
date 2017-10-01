@@ -1,0 +1,293 @@
+body {
+  font-family: 等线;
+  color: #666666;
+  position: relative;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style-type: none;
+}
+
+button {
+  background: #e74d4d;
+  color: #fff;
+  border: none;
+}
+
+.header {
+  width: 100%;
+  background: #fff;
+  box-shadow: 0 0 20px #CCCCCC;
+  position: fixed;
+  top: 0px;
+  z-index: 10;
+}
+
+.header-inner {
+  width: 1280px;
+  height: 60px;
+  min-width: 1280px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  font-size: 22px;
+  margin-left: 40px;
+}
+
+.logo i {
+  color: #e74d4d;
+  font-size: 1.2em;
+}
+
+.nav-bar li {
+  list-style-type: none;
+  margin: 0 24px;
+  float: left;
+}
+
+.nav-bar li a {
+  color: #797979;
+}
+
+.nav-bar li a:hover {
+  color: #e74d4d;
+}
+
+.login {
+  color: #e74d4d;
+}
+
+.login i {
+  font-size: 1.2em;
+}
+
+.container {
+  width: 1280px;
+  margin: 60px auto 0;
+}
+
+.banner-box {
+  width: 1280px;
+  height: 720px;
+  background: url(mission7_navhead.png);
+  position: relative;
+}
+
+.banner-btn {
+  width: 331px;
+  height: 65px;
+  font-size: 2em;
+  position: absolute;
+  bottom: 220px;
+  left: 120px;
+}
+
+.pub {
+  text-align: center;
+}
+
+.pub li {
+  padding: 32px;
+}
+
+.pub li h2 {
+  font-size: 3.2em;
+  color: #e74d4d;
+}
+
+.gray-bar {
+  background: #f0f0f0;
+  color: #797979;
+  height: 308px;
+  text-align: center;
+  padding-top: 12px;
+}
+
+.gray-bar h2 {
+  font-size: 4em;
+  color: #e74d4d;
+}
+
+.gray-bar p {
+  font-size: 3.2em;
+}
+
+.act-search {
+  width: 1280px;
+  height: 340px;
+  background-image: url(mission7_city.jpg);
+  position: relative;
+}
+
+.act-search select {
+  border: solid 1px #e74d4d;
+  width: 236px;
+  height: 36px;
+  color: #797979;
+  font-size: 0.8em;
+  margin-right: 20px;
+}
+
+.act-search option {
+  background-color: #f0f0f0;
+}
+
+.act-search button {
+  width: 236px;
+  height: 36px;
+}
+
+.act-search-box {
+  position: absolute;
+  bottom: 100px;
+  left: 131px;
+}
+
+.act-info {
+  background: #f0f0f0;
+  text-align: center;
+}
+
+.act-info-img {
+  width: 203px;
+  height: 311px;
+  background: #CCCC99;
+  border: solid 11px #FFF;
+  margin: 20px auto;
+}
+
+.intro-details {
+  font-size: 0.8em;
+  height: 567px;
+  text-align: center;
+  padding-top: 120px;
+}
+
+.intro-details button {
+  width: 105px;
+  height: 35px;
+  margin-top: 32px;
+  background-color: #fff;
+  color: #e74d4d;
+  border: solid 1px #e74d4d;
+}
+
+.intro-details button:hover {
+  background: #e74d4d;
+  color: #fff;
+}
+
+.intro-more-left {
+  padding: 48px 0;
+  background: #E7504D;
+  color: #FFF;
+  height: 521px;
+  text-align: center;
+}
+
+.intro-more-left button {
+  border: solid 1px #fff;
+  width: 150px;
+  height: 47px;
+}
+
+.intro-more-left button:hover {
+  background: #fff;
+  color: #E7504D;
+}
+
+.intro-more-right {
+  padding: 48px 0;
+  background: #FFF;
+  color: #E7504D;
+  height: 521px;
+  text-align: center;
+}
+
+.intro-more-right button {
+  color: #E7504D;
+  border: solid 1px #E7504D;
+  background: #fff;
+  width: 150px;
+  height: 47px;
+}
+
+.intro-more-right button:hover {
+  background: #E7504D;
+  color: #fff;
+}
+
+.com {
+  text-align: center;
+  margin-top: 64px;
+}
+
+.input-info input {
+  width: 235px;
+  height: 31px;
+  margin: 20px 24px;
+  background: #f0f0f0;
+  border: none;
+}
+
+.input-info textarea {
+  background: #f0f0f0;
+  border: none;
+}
+
+.input-info button {
+  display: block;
+  width: 522px;
+  height: 41px;
+  margin: auto;
+}
+
+.footer {
+  margin-top: 64px;
+  background-color: #333333;
+  color: #fff;
+  height: 355px;
+  text-align: center;
+  position: relative;
+}
+
+.footer-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.footer-box input {
+  width: 431px;
+  height: 41px;
+  background: #f0f0f0;
+  border: none;
+}
+
+.footer-box button {
+  width: 81px;
+  height: 41px;
+}
+
+.foot-bar {
+  background: #262626;
+  width: 100%;
+  height: 60px;
+  position: absolute;
+  bottom: -60px;
+  color: #fff;
+  text-align: center;
+}
+
+.intro-fill-left, .intro-fill-right {
+  background: #f0f0f0;
+  height: 521px;
+}
