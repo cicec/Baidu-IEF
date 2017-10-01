@@ -1,0 +1,41 @@
+.clear::before, .clear::after {
+  content: '';
+  display: table;
+}
+
+.clear::after {
+  clear: both;
+}
+
+.clear {
+  *zoom: 1;
+}
+
+.container {
+  background: #ccc;
+  width: 400px;
+  height: 200px;
+  overflow: hidden;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.circle {
+  background: #fc0;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  position: absolute;
+}
+
+.circle-left {
+  top: -50px;
+  left: -50px;
+}
+
+.circle-right {
+  bottom: -50px;
+  right: -50px;
+}
