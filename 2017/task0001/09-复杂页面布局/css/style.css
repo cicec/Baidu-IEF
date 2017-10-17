@@ -1,0 +1,371 @@
+@charset "UTF-8";
+.clear::before,
+.clear::after {
+  content: '';
+  display: block;
+  clear: both; }
+
+* {
+  box-sizing: border-box; }
+
+body {
+  font-family: 微软雅黑; }
+
+header {
+  background: #2189c0;
+  color: #ffffff;
+  height: 50px;
+  line-height: 50px;
+  position: relative; }
+  header .logo {
+    font-size: 32px;
+    margin-left: 32px; }
+  header .search {
+    width: 280px;
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    right: 160px; }
+    header .search span {
+      width: 48px;
+      font-size: 12px;
+      background: #ffffff;
+      color: #b8b8b8;
+      border-radius: 24px; }
+    header .search input {
+      border-radius: 24px;
+      height: 32px; }
+  header .login {
+    color: #ffffff;
+    font-size: 12px; }
+
+.body {
+  height: 1100px; }
+  .body aside {
+    background: #2b2e3d;
+    width: 236px;
+    height: 100%;
+    color: #68778d;
+    float: left; }
+    .body aside .user-info {
+      padding-top: 16px;
+      padding-left: 36px;
+      padding-bottom: 48px; }
+      .body aside .user-info .head-portrait {
+        margin-right: 24px;
+        width: 48px;
+        height: 48px;
+        border-radius: 50%;
+        background: #b9babe;
+        float: left; }
+      .body aside .user-info .username {
+        color: #ffffff;
+        font-size: 16px;
+        height: 48px;
+        line-height: 48px;
+        display: block; }
+      .body aside .user-info .collect,
+      .body aside .user-info .fans {
+        font-size: 12px;
+        margin-left: -20px;
+        text-align: center;
+        float: left;
+        width: 50%;
+        margin-top: 12px; }
+      .body aside .user-info .fans {
+        border-left: solid 1px #68778d;
+        margin-left: 0px; }
+    .body aside .aside-options {
+      padding-top: 24px;
+      padding-left: 36px;
+      font-size: 14px; }
+      .body aside .aside-options i {
+        margin-right: 6px; }
+      .body aside .aside-options div {
+        margin: 14px 0; }
+      .body aside .aside-options .aside-option {
+        margin: 24px; }
+      .body aside .aside-options .report input[type=checkbox] {
+        display: none; }
+        .body aside .aside-options .report input[type=checkbox]:checked ~ .options {
+          display: block; }
+      .body aside .aside-options .report .options {
+        display: none; }
+      .body aside .aside-options .report .report-options {
+        margin-left: 24px; }
+        .body aside .aside-options .report .report-options .file-options {
+          margin-left: 24px; }
+  .body .content {
+    width: 904px;
+    height: 100%;
+    background: #ededed;
+    float: left;
+    color: #555555; }
+    .body .content .content-inner {
+      width: 800px;
+      margin: auto; }
+    .body .content .head-bar {
+      background: #ffffff;
+      font-size: 12px;
+      height: 28px;
+      line-height: 28px; }
+      .body .content .head-bar p {
+        font-weight: 600;
+        position: relative;
+        left: 28px;
+        color: #b1b1b1; }
+        .body .content .head-bar p span {
+          color: #7ba3c8; }
+    .body .content .search-box {
+      margin: 20px auto 0;
+      background: #ffffff;
+      width: 800px;
+      font-size: 14px;
+      padding-left: 32px;
+      padding-top: 12px;
+      padding-bottom: 8px; }
+      .body .content .search-box .query-group {
+        float: left;
+        width: 638px; }
+        .body .content .search-box .query-group .select {
+          float: left;
+          margin: 2px 0;
+          color: #b1b1b1;
+          font-size: 12px; }
+          .body .content .search-box .query-group .select select {
+            margin-left: 12px;
+            font-size: 12px;
+            height: 24px;
+            padding: 0;
+            border-radius: 0; }
+        .body .content .search-box .query-group .query-item {
+          margin-left: 16px; }
+          .body .content .search-box .query-group .query-item select {
+            width: 64px; }
+        .body .content .search-box .query-group .buyer {
+          margin-left: 28px; }
+          .body .content .search-box .query-group .buyer select {
+            width: 100px; }
+        .body .content .search-box .query-group .date {
+          margin-left: 28px; }
+          .body .content .search-box .query-group .date select {
+            width: 100px; }
+        .body .content .search-box .query-group .elapsed-time {
+          margin-left: 16px; }
+          .body .content .search-box .query-group .elapsed-time select {
+            width: 54px; }
+        .body .content .search-box .query-group .seller {
+          margin-left: 159px; }
+          .body .content .search-box .query-group .seller select {
+            width: 100px; }
+        .body .content .search-box .query-group .population {
+          margin-left: 28px; }
+          .body .content .search-box .query-group .population select {
+            width: 64px; }
+        .body .content .search-box .query-group .success-item {
+          margin-left: 16px; }
+          .body .content .search-box .query-group .success-item select {
+            width: 92px; }
+      .body .content .search-box .btn-search {
+        float: left;
+        width: 160px; }
+        .body .content .search-box .btn-search button {
+          width: 50px;
+          height: 24px;
+          border-radius: 0;
+          font-size: 10px;
+          background: #398ac1;
+          color: #ffffff;
+          margin-top: 10px; }
+    .body .content .history {
+      width: 800px;
+      height: 58px;
+      margin: 12px auto; }
+      .body .content .history .tab {
+        width: 28px;
+        height: 58px;
+        border-radius: 0;
+        color: #b1b1b1;
+        font-size: 16px;
+        position: relative; }
+        .body .content .history .tab i {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%); }
+      .body .content .history .history-box {
+        width: 102px;
+        height: 58px;
+        border-radius: 0; }
+        .body .content .history .history-box p {
+          font-size: 12px;
+          margin: 0; }
+        .body .content .history .history-box h2 {
+          color: #ec6b0d;
+          font-size: 20px;
+          margin-top: 4px; }
+          .body .content .history .history-box h2 span {
+            color: #b1b1b1;
+            font-size: 16px; }
+      .body .content .history .history-query {
+        width: 98px;
+        height: 58px;
+        border-radius: 0;
+        position: relative; }
+        .body .content .history .history-query p {
+          position: absolute;
+          top: 50%;
+          transform: translate(0, -50%);
+          font-size: 12px; }
+          .body .content .history .history-query p i {
+            color: #4f98c8;
+            font-size: 24px;
+            margin-right: 4px; }
+    .body .content .statistics {
+      margin-top: 16px; }
+      .body .content .statistics h4 {
+        font-size: 12px; }
+      .body .content .statistics .statistics-box {
+        position: relative;
+        background: #ffffff;
+        float: left;
+        width: 180px;
+        height: 58px;
+        margin-right: 26px; }
+        .body .content .statistics .statistics-box p {
+          margin-left: 8px;
+          margin-top: 0;
+          margin-bottom: 0; }
+        .body .content .statistics .statistics-box .success-number {
+          font-size: 10px;
+          font-weight: 600;
+          margin-top: 12px; }
+        .body .content .statistics .statistics-box .text {
+          color: #b1b1b1;
+          font-size: 12px;
+          margin-top: 6px; }
+        .body .content .statistics .statistics-box .color-block {
+          width: 56px;
+          height: 40px;
+          position: absolute;
+          top: 50%;
+          transform: translate(0, -50%);
+          right: 12px; }
+      .body .content .statistics .box-1 {
+        border-left: solid 3px #43b29f; }
+        .body .content .statistics .box-1 .color-block {
+          background: #43b29f; }
+      .body .content .statistics .box-2 {
+        border-left: solid 3px #3889c0; }
+        .body .content .statistics .box-2 .color-block {
+          background: #3889c0; }
+      .body .content .statistics .box-3 {
+        border-left: solid 3px #cf4b36; }
+        .body .content .statistics .box-3 .color-block {
+          background: #cf4b36; }
+      .body .content .statistics .box-4 {
+        border-left: solid 3px #e1cd46;
+        margin: 0; }
+        .body .content .statistics .box-4 .color-block {
+          background: #e1cd46; }
+    .body .content .project-report {
+      margin-top: 16px; }
+      .body .content .project-report .project-table {
+        width: 466px;
+        height: 314px;
+        float: left; }
+        .body .content .project-report .project-table .table-content {
+          height: 200px;
+          border: solid 1px #cdcdcd;
+          border-top: none;
+          border-radius: 0 0 5px 5px;
+          position: relative;
+          padding: 14px 32px; }
+          .body .content .project-report .project-table .table-content table td {
+            font-size: 10px;
+            text-align: center;
+            line-height: 12px; }
+      .body .content .project-report .project-content {
+        width: 326px;
+        height: 314px;
+        margin-left: 8px;
+        float: left; }
+        .body .content .project-report .project-content h6 {
+          color: #b1b1b1;
+          margin: 4px 0 0; }
+        .body .content .project-report .project-content p {
+          font-size: 12px;
+          margin: 4px 0; }
+        .body .content .project-report .project-content .panel-body {
+          padding: 24px 48px; }
+        .body .content .project-report .project-content .price {
+          width: 40%;
+          border: solid 1px #e8e8e8;
+          float: left;
+          border-left: none; }
+        .body .content .project-report .project-content .principal {
+          width: 60%;
+          border: solid 1px #e8e8e8;
+          float: left;
+          border-right: none;
+          padding-left: 12px; }
+        .body .content .project-report .project-content .detail {
+          height: 100px;
+          border-bottom: solid 1px #e8e8e8; }
+        .body .content .project-report .project-content .submit label {
+          color: #b1b1b1;
+          font-weight: normal;
+          font-size: 12px; }
+        .body .content .project-report .project-content .submit button {
+          float: right;
+          width: 72px;
+          height: 32px;
+          margin-top: 4px; }
+      .body .content .project-report .calendar {
+        font-size: 12px;
+        width: 326px;
+        float: left; }
+        .body .content .project-report .calendar select {
+          padding: 0;
+          font-size: 12px;
+          float: left;
+          width: 25%;
+          height: 32px; }
+        .body .content .project-report .calendar button {
+          width: 25%;
+          height: 32px;
+          font-size: 12px; }
+        .body .content .project-report .calendar .panel-body {
+          height: 348px; }
+        .body .content .project-report .calendar table {
+          border-top: solid 1px #398ac0;
+          margin-top: 12px; }
+          .body .content .project-report .calendar table tbody tr .festival .lunar {
+            color: #ce272f; }
+          .body .content .project-report .calendar table tbody tr td {
+            text-align: center; }
+            .body .content .project-report .calendar table tbody tr td p {
+              margin: 2px;
+              font-size: 8px; }
+      .body .content .project-report .ranking {
+        width: 466px;
+        float: left;
+        margin-left: 8px; }
+        .body .content .project-report .ranking .panel-body {
+          height: 348px; }
+          .body .content .project-report .ranking .panel-body table {
+            margin-bottom: 0; }
+            .body .content .project-report .ranking .panel-body table thead tr td {
+              text-align: center;
+              line-height: 12px;
+              font-weight: 600; }
+            .body .content .project-report .ranking .panel-body table tbody tr td {
+              text-align: center;
+              font-size: 12px;
+              line-height: 12px;
+              position: relative; }
+              .body .content .project-report .ranking .panel-body table tbody tr td p {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%); }

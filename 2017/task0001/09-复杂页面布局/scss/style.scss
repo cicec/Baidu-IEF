@@ -1,0 +1,519 @@
+$color-white: #ffffff;
+$color-aside-text: #68778d;
+$color-main-text: #555555;
+$color-minor-text: #b1b1b1;
+$default-font: 微软雅黑;
+@mixin verticalCenter {
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+}
+
+@mixin center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@mixin pullDownMenu {
+    input[type=checkbox] {
+        display: none;
+        &:checked {
+            ~.options {
+                display: block;
+            }
+        }
+    }
+    .options {
+        display: none;
+    }
+}
+
+@mixin setQuerySelect($margin-left, $width) {
+    margin-left: $margin-left;
+    select {
+        width: $width;
+    }
+}
+
+.clear::before,
+.clear::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: $default-font;
+}
+
+header {
+    background: #2189c0;
+    color: $color-white;
+    height: 50px;
+    line-height: 50px;
+    position: relative;
+    .logo {
+        font-size: 32px;
+        margin-left: 32px;
+    }
+    .search {
+        width: 280px;
+        @include verticalCenter;
+        right: 160px;
+        span {
+            width: 48px;
+            font-size: 12px;
+            background: $color-white;
+            color: #b8b8b8;
+            border-radius: 24px;
+        }
+        input {
+            border-radius: 24px;
+            height: 32px;
+        }
+    }
+    .login {
+        color: $color-white;
+        font-size: 12px;
+    }
+}
+
+.body {
+    height: 1100px;
+    aside {
+        background: #2b2e3d;
+        width: 236px;
+        height: 100%;
+        color: $color-aside-text;
+        float: left;
+        .user-info {
+            padding: {
+                top: 16px;
+                left: 36px;
+                bottom: 48px;
+            }
+            .head-portrait {
+                margin: {
+                    right: 24px;
+                }
+                width: 48px;
+                height: 48px;
+                border-radius: 50%;
+                background: #b9babe;
+                float: left;
+            }
+            .username {
+                color: $color-white;
+                font-size: 16px;
+                height: 48px;
+                line-height: 48px;
+                display: block;
+            }
+            .collect,
+            .fans {
+                font-size: 12px;
+                margin: {
+                    left: -20px;
+                }
+                text-align: center;
+                float: left;
+                width: 50%;
+                margin: {
+                    top: 12px;
+                }
+            }
+            .fans {
+                border: {
+                    left: solid 1px $color-aside-text;
+                }
+                margin: {
+                    left: 0px;
+                }
+            }
+        }
+        .aside-options {
+            padding: {
+                top: 24px;
+                left: 36px;
+            }
+            font-size: 14px;
+            i {
+                margin-right: 6px;
+            }
+            div {
+                margin: 14px 0;
+            }
+            .aside-option {
+                margin: 24px;
+            }
+            .report {
+                @include pullDownMenu;
+                .report-options {
+                    margin-left: 24px;
+                    .file-options {
+                        margin-left: 24px;
+                    }
+                }
+            }
+        }
+    }
+    .content {
+        width: 904px;
+        height: 100%;
+        background: #ededed;
+        float: left;
+        color: $color-main-text;
+        .content-inner {
+            width: 800px;
+            margin: auto;
+        }
+        .head-bar {
+            background: $color-white;
+            font-size: 12px;
+            height: 28px;
+            line-height: 28px;
+            p {
+                font-weight: 600;
+                position: relative;
+                left: 28px;
+                color: $color-minor-text;
+                span {
+                    color: #7ba3c8;
+                }
+            }
+        }
+        .search-box {
+            margin: 20px auto 0;
+            background: $color-white;
+            width: 800px;
+            font-size: 14px;
+            padding: {
+                left: 32px;
+                top: 12px;
+                bottom: 8px;
+            }
+            .query-group {
+                float: left;
+                width: 638px;
+                .select {
+                    float: left;
+                    margin: 2px 0;
+                    color: $color-minor-text;
+                    font-size: 12px;
+                    select {
+                        margin-left: 12px;
+                        font-size: 12px;
+                        height: 24px;
+                        padding: 0;
+                        border-radius: 0;
+                    }
+                }
+                .query-item {
+                    @include setQuerySelect(16px, 64px);
+                }
+                .buyer {
+                    @include setQuerySelect(28px, 100px);
+                }
+                .date {
+                    @include setQuerySelect(28px, 100px);
+                }
+                .elapsed-time {
+                    @include setQuerySelect(16px, 54px);
+                }
+                .seller {
+                    @include setQuerySelect(159px, 100px);
+                }
+                .population {
+                    @include setQuerySelect(28px, 64px);
+                }
+                .success-item {
+                    @include setQuerySelect(16px, 92px);
+                }
+            }
+            .btn-search {
+                float: left;
+                width: 160px;
+                button {
+                    width: 50px;
+                    height: 24px;
+                    border-radius: 0;
+                    font-size: 10px;
+                    background: #398ac1;
+                    color: $color-white;
+                    margin: {
+                        top: 10px;
+                    }
+                }
+            }
+        }
+        .history {
+            $history-height: 58px;
+            width: 800px;
+            height: $history-height;
+            margin: 12px auto;
+            .tab {
+                width: 28px;
+                height: $history-height;
+                border-radius: 0;
+                color: $color-minor-text;
+                font-size: 16px;
+                position: relative;
+                i {
+                    @include center;
+                }
+            }
+            .history-box {
+                width: 102px;
+                height: $history-height;
+                border-radius: 0;
+                p {
+                    font-size: 12px;
+                    margin: 0;
+                }
+                h2 {
+                    color: #ec6b0d;
+                    font-size: 20px;
+                    margin-top: 4px;
+                    span {
+                        color: $color-minor-text;
+                        font-size: 16px;
+                    }
+                }
+            }
+            .history-query {
+                width: 98px;
+                height: $history-height;
+                border-radius: 0;
+                position: relative;
+                p {
+                    @include verticalCenter();
+                    font-size: 12px;
+                    i {
+                        color: #4f98c8;
+                        font-size: 24px;
+                        margin-right: 4px;
+                    }
+                }
+            }
+        }
+        .statistics {
+            margin-top: 16px;
+            h4 {
+                font-size: 12px;
+            }
+            .statistics-box {
+                position: relative;
+                background: $color-white;
+                float: left;
+                width: 180px;
+                height: 58px;
+                margin-right: 26px;
+                p {
+                    margin: {
+                        left: 8px;
+                        top: 0;
+                        bottom: 0;
+                    }
+                }
+                .success-number {
+                    font-size: 10px;
+                    font-weight: 600;
+                    margin: {
+                        top: 12px;
+                    }
+                }
+                .text {
+                    color: $color-minor-text;
+                    font-size: 12px;
+                    margin: {
+                        top: 6px;
+                    }
+                }
+                .color-block {
+                    width: 56px;
+                    height: 40px;
+                    @include verticalCenter();
+                    right: 12px;
+                }
+            }
+            .box-1 {
+                $color: #43b29f;
+                border-left: solid 3px $color;
+                .color-block {
+                    background: $color;
+                }
+            }
+            .box-2 {
+                $color: #3889c0;
+                border-left: solid 3px $color;
+                .color-block {
+                    background: $color;
+                }
+            }
+            .box-3 {
+                $color: #cf4b36;
+                border-left: solid 3px $color;
+                .color-block {
+                    background: $color;
+                }
+            }
+            .box-4 {
+                $color: #e1cd46;
+                border-left: solid 3px $color;
+                .color-block {
+                    background: $color;
+                }
+                margin: 0;
+            }
+        }
+        .project-report {
+            margin-top: 16px;
+            .project-table {
+                width: 466px;
+                height: 314px;
+                float: left;
+                .table-content {
+                    height: 200px;
+                    border: solid 1px #cdcdcd;
+                    border-top: none;
+                    border-radius: 0 0 5px 5px;
+                    position: relative;
+                    padding: 14px 32px;
+                    table {
+                        td {
+                            font-size: 10px;
+                            text-align: center;
+                            line-height: 12px;
+                        }
+                    }
+                }
+            }
+            .project-content {
+                width: 326px;
+                height: 314px;
+                margin-left: 8px;
+                float: left;
+                h6 {
+                    color: $color-minor-text;
+                    margin: 4px 0 0;
+                }
+                p {
+                    font-size: 12px;
+                    margin: 4px 0;
+                }
+                .panel-body {
+                    padding: 24px 48px;
+                }
+                .price {
+                    width: 40%;
+                    border: solid 1px #e8e8e8;
+                    float: left;
+                    border-left: none;
+                }
+                .principal {
+                    width: 60%;
+                    border: solid 1px #e8e8e8;
+                    float: left;
+                    border-right: none;
+                    padding-left: 12px;
+                }
+                .detail {
+                    height: 100px;
+                    border-bottom: solid 1px #e8e8e8;
+                }
+                .submit {
+                    label {
+                        color: $color-minor-text;
+                        font-weight: normal;
+                        font-size: 12px;
+                    }
+                    button {
+                        float: right;
+                        width: 72px;
+                        height: 32px;
+                        margin-top: 4px;
+                    }
+                }
+            }
+            .calendar {
+                font-size: 12px;
+                width: 326px;
+                float: left;
+                select {
+                    padding: 0;
+                    font-size: 12px;
+                    float: left;
+                    width: 25%;
+                    height: 32px;
+                }
+                button {
+                    width: 25%;
+                    height: 32px;
+                    font-size: 12px;
+                }
+                .panel-body {
+                    height: 348px;
+                }
+                table {
+                    border-top: solid 1px #398ac0;
+                    margin-top: 12px;
+                    tbody {
+                        tr {
+                            .festival {
+                                .lunar {
+                                    color: #ce272f;
+                                }
+                            }
+                            td {
+                                text-align: center;
+                                p {
+                                    margin: 2px;
+                                    font-size: 8px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .ranking {
+                width: 466px;
+                float: left;
+                margin-left: 8px;
+                .panel-body {
+                    height: 348px;
+                    table {
+                        margin-bottom: 0;
+                        thead {
+                            tr {
+                                td {
+                                    text-align: center;
+                                    line-height: 12px;
+                                    font-weight: 600;
+                                }
+                            }
+                        }
+                        tbody {
+                            tr {
+                                td {
+                                    text-align: center;
+                                    font-size: 12px;
+                                    line-height: 12px;
+                                    position: relative;
+                                    p {
+                                        @include center();
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
