@@ -1,0 +1,26 @@
+.container {
+    text-align: center;
+    font-weight: 600;
+    margin-top: 24px;
+}
+
+#input-text {
+    margin: auto;
+    width: 400px;
+    height: 32px;
+    display: block;
+    font-size: 20px;
+}
+
+#input-btn {
+    font-weight: 600;
+    background: #56c7b2;
+    color: #ffffff;
+    border: none;
+    outline: none;
+    width: 400px;
+    height: 32px;
+    margin: 16px auto;
+    display: block;
+    border-radius: 2px;
+}
