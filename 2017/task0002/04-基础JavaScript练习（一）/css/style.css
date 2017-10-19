@@ -23,6 +23,7 @@
   .container .queue {
     margin-left: 4px; }
     .container .queue .queue-item {
+      box-sizing: border-box;
       width: 100px;
       height: 100px;
       background: #CC99CC;
@@ -31,3 +32,7 @@
       color: #fff;
       text-align: center;
       line-height: 100px; }
+      .container .queue .queue-item:hover {
+        background: #fff;
+        color: #CC99CC;
+        border: solid 1px #CC99CC; }
