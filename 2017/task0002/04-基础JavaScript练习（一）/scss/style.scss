@@ -1,0 +1,44 @@
+$main-color: #CC99CC;
+$white: #fff;
+.container {
+    width: 752px;
+    margin: auto;
+    .control {
+        text-align: center;
+        margin: 32px 0;
+        input {
+            width: 200px;
+            height: 28px;
+            font-size: 18px;
+        }
+        button {
+            width: 120px;
+            height: 32px;
+            border: solid 1px $main-color;
+            background: $white;
+            color: $main-color;
+            outline: none;
+            &:hover {
+                background: $main-color;
+                color: $white;
+            }
+        }
+        #dequeue-left {
+            margin-left: 24px;
+        }
+    }
+    .queue {
+        margin-left: 4px;
+        $item-width: 100px;
+        .queue-item {
+            width: $item-width;
+            height: $item-width;
+            background: $main-color;
+            margin: 12px;
+            float: left;
+            color: $white;
+            text-align: center;
+            line-height: $item-width;
+        }
+    }
+}

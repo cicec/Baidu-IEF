@@ -1,0 +1,33 @@
+.container {
+  width: 752px;
+  margin: auto; }
+  .container .control {
+    text-align: center;
+    margin: 32px 0; }
+    .container .control input {
+      width: 200px;
+      height: 28px;
+      font-size: 18px; }
+    .container .control button {
+      width: 120px;
+      height: 32px;
+      border: solid 1px #CC99CC;
+      background: #fff;
+      color: #CC99CC;
+      outline: none; }
+      .container .control button:hover {
+        background: #CC99CC;
+        color: #fff; }
+    .container .control #dequeue-left {
+      margin-left: 24px; }
+  .container .queue {
+    margin-left: 4px; }
+    .container .queue .queue-item {
+      width: 100px;
+      height: 100px;
+      background: #CC99CC;
+      margin: 12px;
+      float: left;
+      color: #fff;
+      text-align: center;
+      line-height: 100px; }
