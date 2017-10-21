@@ -1,0 +1,48 @@
+.clear::before,
+.clear::after {
+  content: '';
+  display: block;
+  clear: both; }
+
+.clear {
+  *zoom: 1; }
+
+.container {
+  width: 752px;
+  margin: auto; }
+  .container .control {
+    text-align: center;
+    margin: 32px 0; }
+    .container .control input {
+      width: 200px;
+      height: 28px;
+      font-size: 18px; }
+    .container .control button {
+      width: 80px;
+      height: 32px;
+      border: solid 1px #CC99CC;
+      background: #fff;
+      color: #CC99CC;
+      outline: none; }
+      .container .control button:hover {
+        background: #CC99CC;
+        color: #fff; }
+    .container .control #dequeue-left, .container .control #sort {
+      margin-left: 24px; }
+  .container .queue {
+    margin-left: 12px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end; }
+    .container .queue .queue-item {
+      box-sizing: border-box;
+      width: 40px;
+      background: #CC99CC;
+      margin: 13px;
+      float: left;
+      color: #fff;
+      text-align: center; }
+      .container .queue .queue-item:hover {
+        background: #fff;
+        color: #CC99CC;
+        border: solid 1px #CC99CC; }
