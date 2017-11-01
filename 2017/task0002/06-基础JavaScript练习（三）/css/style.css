@@ -1,0 +1,37 @@
+.container {
+  width: 752px;
+  margin: auto; }
+  .container button {
+    width: 120px;
+    height: 32px;
+    border: solid 1px #CC99CC;
+    background: #fff;
+    color: #CC99CC;
+    outline: none; }
+    .container button:hover {
+      background: #CC99CC;
+      color: #fff; }
+  .container .control {
+    text-align: center;
+    margin: 32px 0; }
+    .container .control textarea {
+      font-size: 20px; }
+    .container .control #dequeue-left {
+      margin-left: 24px; }
+  .container .query input {
+    width: 200px;
+    height: 26px;
+    font-size: 18px; }
+  .container .queue {
+    margin-left: 4px; }
+    .container .queue .queue-item {
+      width: 100px;
+      height: 100px;
+      background: #CC99CC;
+      margin: 12px;
+      float: left;
+      color: #fff;
+      text-align: center;
+      line-height: 100px; }
+    .container .queue .item-queried {
+      color: red; }
